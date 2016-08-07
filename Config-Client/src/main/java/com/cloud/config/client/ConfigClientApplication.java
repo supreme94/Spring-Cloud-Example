@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ConfigClientApplication {
 	@Value("${name.world}")
-	private String world;
+ String world;
 	
 	@RequestMapping("/")
     public String index(){
