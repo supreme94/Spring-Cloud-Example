@@ -1,0 +1,9 @@
+server:
+  port: 7075
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      profile: dev
+      uri: http://localhost:7070/
