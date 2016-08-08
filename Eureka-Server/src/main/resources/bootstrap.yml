@@ -1,10 +1,10 @@
 server:
   port: 6000
 spring:
+  application:
+    name: eureka-server
   cloud:
     config:
       enabled: true
       profile: dev
       uri: http://localhost:7070/
-  application:
-    name: eureka-server
