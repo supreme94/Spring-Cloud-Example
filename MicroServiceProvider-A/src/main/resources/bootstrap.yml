@@ -1,0 +1,10 @@
+server:
+  port: 9010
+spring:
+  application:
+    name: micro-service-a
+  cloud:
+    config:
+      enabled: true
+      profile: dev
+      uri: http://localhost:7070/
