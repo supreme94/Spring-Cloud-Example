@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: service-consumer
+  cloud:
+    config:
+      enabled: true
+      profile: dev
+      uri: http://localhost:7070/
+eureka:
+  client:
+    serviceUrl:
+      registerWithEureka: true
+      fetchRegistry: true
+      defaultZone: http://localhost:7080/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}

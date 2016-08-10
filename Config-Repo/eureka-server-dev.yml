@@ -1,8 +1,6 @@
 eureka:
   instance:
     hostname: localhost
-    metadata_map:
-      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
   client:
     register-with-eureka: false
     fetch-registry: false
