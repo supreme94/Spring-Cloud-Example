@@ -11,9 +11,8 @@ public class RibbonClient {
 	@Autowired
 	RestTemplate restTemplate;
 	
-	@RequestMapping(value="/hello",method=RequestMethod.GET)
-	public String hello() {
-		System.out.println(restTemplate + "-------");
-		return restTemplate.getForEntity("http://MICROSERVICEPROVIDER-A/hello", String.class).getBody();
-	}
+//	@RequestMapping(value="/hello",method=RequestMethod.GET)
+//	public String hello() {
+//		return restTemplate.getForEntity("http://MICRO-SERVICE-A/hello", String.class).getBody();
+//	}
 }

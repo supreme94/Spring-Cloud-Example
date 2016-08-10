@@ -3,6 +3,8 @@ package com.cloud.eureka.client.resource;
 import javax.ws.rs.core.Response;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,8 +21,13 @@ public class UserController {
 	@Autowired
 	UserRepositroy userRepositroy;
 	
+	@Autowired
+	DiscoveryClient client;
+	
 	@RequestMapping(value="/{pageNumber}/{pageSize}",method=RequestMethod.GET)
 	public Response findAll(@PathVariable("pageNumber") Integer pageNumber, @PathVariable("pageSize") Integer pageSize) {
+		ServiceInstance localInstance = client.getLocalServiceInstance();
+		System.out.println(localInstance.getServiceId()+":"+localInstance.getHost()+":"+localInstance.getPort());
 		return Response.ok(userRepositroy.findAll(new PageRequest(pageNumber-1, pageSize))).build();
 	}
 	

@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableDiscoveryClient
-//@EnableFeignClients
+@EnableFeignClients
 public class ServiceClientApplication {
 	
 	@Bean
