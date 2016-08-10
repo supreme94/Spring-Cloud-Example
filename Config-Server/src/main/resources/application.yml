@@ -7,7 +7,3 @@ spring:
         git:
           search-paths: Config-Repo
           uri: https://github.com/supreme94/Spring-Cloud-Example.git
-          username: supreme94
-          password: lp19920717
-  application:
-    name: config-server
