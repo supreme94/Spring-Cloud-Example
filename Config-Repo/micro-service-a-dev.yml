@@ -10,6 +10,8 @@ spring:
 eureka:
   client:
     serviceUrl:
+      registerWithEureka: true
+      fetchRegistry: true
       defaultZone: http://localhost:7080/eureka/
   instance:
     appname: microserviceprovider-a
