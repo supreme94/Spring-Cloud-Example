@@ -15,6 +15,7 @@ public class HelloController {
 	@RequestMapping("/hello")
 	public String helloWorld() {
 		ServiceInstance localInstance = client.getLocalServiceInstance();
+		System.out.println(localInstance.getServiceId()+":"+localInstance.getHost()+":"+localInstance.getPort());
 		return "Hello World: "+ localInstance.getServiceId()+":"+localInstance.getHost()+":"+localInstance.getPort();
 	}
 }
