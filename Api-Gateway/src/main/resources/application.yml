@@ -1,0 +1,13 @@
+server:
+  port: 9999
+spring:
+  application:
+    name: api-gateway
+zuul:
+  routes:
+    api:
+      path: /api/**
+      url: http://localhost:9050/
+    service:
+      path: /service/**
+      serviceId: micro-service-a
