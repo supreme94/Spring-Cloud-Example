@@ -1,4 +1,4 @@
-package com.cloud.eureka.client.resource;
+package com.cloud.eureka.client.controller;
 
 import javax.ws.rs.core.Response;
 
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.cloud.eureka.client.entity.User;
 import com.cloud.eureka.client.repo.UserRepositroy;
 
-@RequestMapping(value="/users", produces="application/json")
-@RestController
+//@RequestMapping(value="/users", produces="application/json")
+//@RestController
 public class UserController {
 	@Autowired
 	UserRepositroy userRepositroy;

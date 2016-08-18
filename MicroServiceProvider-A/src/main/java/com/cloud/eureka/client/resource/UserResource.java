@@ -48,6 +48,7 @@ public class UserResource {
 	
 	@POST
 	public Response save(User user) {
+		System.out.println(user);
 		return Response.ok(userRepositroy.save(user)).build();
 	}
 }

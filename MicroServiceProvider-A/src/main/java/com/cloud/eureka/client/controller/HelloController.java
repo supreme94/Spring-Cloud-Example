@@ -1,4 +1,4 @@
-package com.cloud.eureka.client.resource;
+package com.cloud.eureka.client.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
@@ -14,6 +14,7 @@ public class HelloController {
 	
 	@RequestMapping("/hello")
 	public String helloWorld() {
+		System.out.println("-----------------------------------------------------");
 		ServiceInstance localInstance = client.getLocalServiceInstance();
 		System.out.println(localInstance.getServiceId()+":"+localInstance.getHost()+":"+localInstance.getPort());
 		return "Hello World: "+ localInstance.getServiceId()+":"+localInstance.getHost()+":"+localInstance.getPort();
