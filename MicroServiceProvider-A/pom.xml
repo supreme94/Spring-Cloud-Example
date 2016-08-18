@@ -35,24 +35,20 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
-			<!-- <exclusions>
+			<exclusions>
 				<exclusion>
 					<groupId>javax.ws.rs</groupId>
 					<artifactId>jsr311-api</artifactId>
 				</exclusion>
 				<exclusion>
 					<groupId>com.sun.jersey</groupId>
-    				<artifactId>jersey-client</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>com.sun.jersey</groupId>
-    				<artifactId>jersey-core</artifactId>
+    				<artifactId>jersey</artifactId>
 				</exclusion>
 				<exclusion>
 					 <groupId>com.sun.jersey.contribs</groupId>
     			     <artifactId>jersey-apache-client4</artifactId>
 				</exclusion>
-			</exclusions> -->
+			</exclusions>
 		</dependency>
 		
 		<!-- <dependency>
@@ -65,10 +61,10 @@
 			<artifactId>spring-boot-starter-data-mongodb</artifactId>
 		</dependency>
 
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jersey</artifactId>
-		</dependency> -->
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
