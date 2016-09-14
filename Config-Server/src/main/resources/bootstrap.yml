@@ -4,3 +4,12 @@ spring:
   cloud:
     config:
       uri: http://localhost:7070
+      server:
+        git:
+          search-paths: Config-Repo
+          uri: https://github.com/supreme94/Spring-Cloud-Example.git
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181

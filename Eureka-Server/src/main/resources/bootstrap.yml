@@ -8,3 +8,8 @@ spring:
       enabled: true
       profile: dev
       uri: http://localhost:7070/
+    stream:
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zk-nodes: localhost:2181
